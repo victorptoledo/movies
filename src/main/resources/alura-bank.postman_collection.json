@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "3cdf97cb-7e52-4180-b96e-ef90e5bf12ba",
+		"name": "alura-bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27280848"
+	},
+	"item": [
+		{
+			"name": "Obter saldo da conta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/contas?banco=111&agencia=2222&numero=213126144",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"contas"
+					],
+					"query": [
+						{
+							"key": "banco",
+							"value": "111"
+						},
+						{
+							"key": "agencia",
+							"value": "2222"
+						},
+						{
+							"key": "numero",
+							"value": "213126144"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar conta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Victo Toledo\",\r\n    \"cpf\":\"12345678911\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/contas",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"contas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar conta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"banco\": \"111\",\r\n    \"agencia\": \"2222\",\r\n    \"numero\": \"2131261445\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/contas",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"contas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movimentar conta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor\": \"10.00\",\r\n    \"operacao\": 0,\r\n    \"contaCorrente\": {\r\n        \"banco\": \"111\",\r\n        \"agencia\": \"2222\",\r\n        \"numero\": \"2131261445\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/contas",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"contas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
