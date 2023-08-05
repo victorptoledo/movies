@@ -9,13 +9,13 @@ import java.util.List;
 @Service
 public class MovieService {
 
-    private MovieRepository movieRepository;
+    private final MovieRepository movieRepository;
 
     public MovieService(MovieRepository movieRepository) {
         this.movieRepository = movieRepository;
     }
 
-    public List<Movie> AllMovies(){
+    public List<Movie> AllMovies() {
         return movieRepository.findAll();
     }
 }
